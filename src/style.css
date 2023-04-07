@@ -1,0 +1,137 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+.header {
+    background-color: rgb(76 77 76);
+
+    background-attachment: fixed;
+
+}
+
+.navlink1:hover {
+    color: coral;
+
+
+}
+
+.navlink1 {
+    color: white;
+    text-decoration: none;
+
+    padding: 12px;
+
+}
+
+.cos {
+    background: linear-gradient(grey, black);
+}
+
+.cards {
+    float: left;
+    clear: none;
+    margin: 70px;
+    background-color: antiquewhite;
+
+}
+
+.footers {
+    background-color: bisque;
+}
+
+.lii {
+    color: bisque;
+}
+
+.foot {
+    display: flex;
+    justify-content: space-between;
+
+}
+
+.foot1 {
+
+
+    background: lightgreen;
+    margin: 10px;
+    list-style: none
+}
+
+.footers1 {
+    background-color: red;
+}
+
+foot2 {}
+
+.main-footer {
+    color: wheat;
+    background-color: rgb(76 77 76);
+    padding-top: 3em;
+    position: relative;
+    width: 100%;
+}
+
+.work {
+    background-color: #fcb900;
+    line-height: 1.5;
+}
+
+.work2 {
+    background-color: #f2f2f3;
+}
+
+video[src] {
+    padding: 20px;
+    width: 30%;
+    height: 50vh;
+}
+
+.c1 {
+    color: wheat;
+    background-color: black;
+}
+
+.c0 {
+    background-color: darkgrey;
+    color: black;
+}
+
+.c2 {
+    background-color: bisque;
+}
+
+.form1 {
+    background-color: black;
+    color: wheat;
+
+}
+
+.donate {
+    text-decoration: underline;
+    font-size: 30px;
+}
+
+.su {}
+
+.fg {
+    font-size: 50px;
+}
+
+.primary {
+    color: wheat;
+    background-color: black;
+
+}
+
+th,
+td {
+    padding: 15px;
+    text-align: left;
+}
+
+.con {
+    padding: 10px;
+    margin: 10px;
+}
