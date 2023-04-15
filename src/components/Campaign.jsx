@@ -30,7 +30,7 @@ const Aboutus = () => {
         </li>
         <li>
           Awareness camps to promote health seeking behavior among high-risk
-          communities.
+          communities
         </li>
         <li>
           Referrals to nearby public and private health centres for secondary
