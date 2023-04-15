@@ -40,10 +40,10 @@ const Nav = () => {
                   <li className="nav-item">
                     <Link
                       className="navlink1"
-                      to="/Donate"
+                      to="/Signin"
                       style={{ fontSize: "30px" }}
                     >
-                      To Donate
+                     To Donate
                     </Link>
                   </li>
                   <li className="nav-item">
