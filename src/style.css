@@ -11,6 +11,16 @@
 
 }
 
+.donate1 {
+    color: black;
+    padding: 20px;
+    font-size: 50px;
+}
+
+.donate1:hover {
+    color: coral;
+}
+
 .navlink1:hover {
     color: coral;
 

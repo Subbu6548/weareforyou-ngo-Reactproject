@@ -1,11 +1,12 @@
 
 import React,{useState,useEffect} from 'react'
-
+import "../style.css";
 import firebase from 'firebase/compat/app';
 import 'firebase/compat/auth';
 import 'firebase/compat/firestore';
 import { getAuth, onAuthStateChanged, signInWithPopup } from "firebase/auth";
 import { initializeApp } from "firebase/app"
+import { Link } from 'react-router-dom';
 
 const firebaseApp = initializeApp({ 
   apiKey: "AIzaSyCiba2s84YwGEBPVCpqc_71RwgRhSXrd18",
@@ -48,10 +49,16 @@ const Signin = () => {
         <div>
       <center>
         {user ?
-        <div>
-          <h1>Welcome TO home</h1>
+
+        < div >
+      
+          <Link to="/Donate" className='donate1'
+           >To donate</Link>
+          
+          
           <button onClick={()=>auth.signOut()}>Sign out</button>
 
+          
 
         </div> :
       <button onClick={signInWithGoogle}>sign in with google</button>
