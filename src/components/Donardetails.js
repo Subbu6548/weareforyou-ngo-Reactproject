@@ -1,17 +1,30 @@
 import axios from "axios";
 import "../style.css";
 import React, { useEffect, useState } from "react";
-
+import { useParams,Link} from "react-router-dom";
 function Donardetails() {
   const [data, Setdata] = useState([]);
   var amo = 0;
 
+  const { id }=useParams();
+
   useEffect(() => {
-    axios
-      .get("http://localhost:8080/getdetails")
-      .then((res) => Setdata(res.data))
-      .catch((ex) => console.log(ex));
+    loadDetails();
   }, []);
+ 
+  const loadDetails =async()=>
+  {
+     const result =await  axios
+     .get("http://localhost:8080/getdetails");
+     Setdata(result.data);
+  }
+
+  const DeleteDetail = async(id) =>
+  {
+   
+   await  axios.delete(`http://localhost:8080/donate/${id}`);
+   loadDetails();
+  };
 
   return (
     <div className="donardetails">
@@ -29,6 +42,8 @@ function Donardetails() {
                 <th>phonenumber</th>
 
                 <th>amount</th>
+                <th>Edit</th>
+                <th>delete</th>
               </tr>
             </thead>
             <tbody>
@@ -43,6 +58,8 @@ function Donardetails() {
                   <td>{details.phnumber}</td>
 
                   <td>{details.amount}</td>
+                  <td><Link to={`/EditUser/${details.id}`} >Edit</Link></td>
+                 <td> <button onClick={()=>DeleteDetail(details.id)}>Delete</button></td>
                 </tr>
               ))}
             </tbody>

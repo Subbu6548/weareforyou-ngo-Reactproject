@@ -3,7 +3,7 @@ import "../style.css";
 const Aboutus = () => {
   return (
     <div>
-      <img src={require("/Users/subbu/weforyou/src/images/campaign1.png")} />
+      <img src={require("/Users/subbu/weforyou/src/images/campaign1.png")} width={"100%"} />
       <center>
         <h2 className="c0">Support Our Cause</h2>
       </center>

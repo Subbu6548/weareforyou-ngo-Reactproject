@@ -3,7 +3,7 @@ import Card from "react-bootstrap/Card";
 
 import "../style.css";
 
-const Cards = () => {
+const Carding = () => {
   return (
     <div>
       <Card className="cards" style={{ width: "350px" }}>
@@ -13,7 +13,7 @@ const Cards = () => {
         />
         <Card.Body className="container">
           <Card.Title>
-            We Are For You Foundation has been accredited as a GlobalGiving
+            We Are For You Foundation Of Sowmya has been accredited as a GlobalGiving
             validated charity
           </Card.Title>
           <Card.Text>We Are For You Foundation has been certified .</Card.Text>
@@ -58,4 +58,4 @@ const Cards = () => {
   );
 };
 
-export default Cards;
+export default Carding;

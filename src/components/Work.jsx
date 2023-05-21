@@ -4,7 +4,7 @@ import "../style.css";
 const Work = () => {
   return (
     <div>
-      <img src={require("/Users/subbu/weforyou/src/images/health.png")} />
+      <img  src={require("/Users/subbu/weforyou/src/images/health.png")} width={"100%"} />
       <section className="work">
         <center>
           <h2>WHY HEALTHCARE</h2>
@@ -62,7 +62,7 @@ const Work = () => {
           ></video>
 
           <video
-            src={require("/Users/subbu/weforyou/src/videos/video2.mp4")}
+            
             controls
             
             poster={require("/Users/subbu/weforyou/src/images/10.jpg")}

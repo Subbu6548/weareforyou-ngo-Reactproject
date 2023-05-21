@@ -52,16 +52,12 @@ const Signin = () => {
 
         < div >
       
-          <Link to="/Donate" className='donate1'
+          <Link to="/Donarpost" className='donate1'
            >To donate</Link>
-          
-          
-          <button onClick={()=>auth.signOut()}>Sign out</button>
-
-          
-
+           
+          <button className="btn btn-outline-primary" onClick={()=>auth.signOut()}>Sign out</button>
         </div> :
-      <button onClick={signInWithGoogle}>sign in with google</button>
+      <button className="btn btn-outline-danger mx-2" onClick={signInWithGoogle}>sign in with google</button>
       }
       </center>
         
