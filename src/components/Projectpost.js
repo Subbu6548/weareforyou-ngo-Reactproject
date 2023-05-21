@@ -22,7 +22,7 @@ function Projectpost() {
   };
   const submithandler = (e) => {
     e.preventDefault();
-  alert("you have added correctly");
+  alert("project have been added successfully");
    axios.post("http://localhost:8082/api/project",data).then(
     (res)=>console.log(res.data)
    ).catch(
