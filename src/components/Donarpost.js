@@ -32,9 +32,9 @@ function Donarpost() {
   };
   return (
     <div>
-     
-
+ 
       <form className="form1" onSubmit={submithandler} >
+      
         <center>
         <h1 className="fg">TO DONATE</h1>
           <p >DONOR DETAILS</p>

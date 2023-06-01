@@ -52,8 +52,8 @@ const Signin = () => {
 
         < div >
       
-          <Link to="/Donarpost" className='donate1'
-           >To donate</Link>
+          <Link to="/Projectpost" className='donate1'
+           >To add project</Link>
            
           <button className="btn btn-outline-primary" onClick={()=>auth.signOut()}>Sign out</button>
         </div> :

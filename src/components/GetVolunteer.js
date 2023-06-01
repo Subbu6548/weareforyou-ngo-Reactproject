@@ -20,12 +20,14 @@ const loadDetails =async()=>
      .get(`http://localhost:8080/api/volunteer/${id}`)
      .then(
       (res)=>console.log(res.data)
+      
      ).catch(
       (ex)=>console.log(ex)
      );
      setData(result.data);
    
   }
+  
   useEffect(() => {
     loadDetails();
   }, []);
@@ -60,7 +62,7 @@ const loadDetails =async()=>
              </tr>
                   
             </thead>
-           
+        
 
 
             <tbody>
@@ -72,6 +74,7 @@ const loadDetails =async()=>
                   <td>{details.project_name}</td>
                   <td>{details.project_description}</td>
                   <td>{details.projectplace}</td>
+              
 
                 </tr>
               ))}

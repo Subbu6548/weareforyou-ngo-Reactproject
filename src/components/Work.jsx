@@ -55,14 +55,14 @@ const Work = () => {
       <section className="work3">
         <center>
           <video
-            src={require("/Users/subbu/weforyou/src/videos/video1.mp4")}
+            src={require("/Users/subbu/weforyou/src/videos/video1.mp4")} width={"50px"}
             controls
            
-            poster={require("/Users/subbu/weforyou/src/images/11.jpg")}
+            poster={require("/Users/subbu/weforyou/src/images/11.jpg")} 
           ></video>
 
           <video
-            
+            src={require("/Users/subbu/weforyou/src/videos/video2.mp4")}
             controls
             
             poster={require("/Users/subbu/weforyou/src/images/10.jpg")}
