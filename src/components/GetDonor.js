@@ -2,7 +2,7 @@ import axios from "axios";
 import React, { useEffect, useState } from "react";
 import { Link, useNavigate, useParams } from "react-router-dom";
 
-
+import "../style.css"
 function GetDonor() {
  
   
@@ -14,21 +14,25 @@ function GetDonor() {
 const [data,setData]=useState([]
 
 );
+
+
+
 const loadDetails =async()=>
   {
-     const result =await  axios
+     return  axios
      .get(`http://localhost:8083/api/donor/${id}`)
      .then(
-      (res)=>console.log(res.data)
+      (response)=>setData(response.data)
      ).catch(
       (ex)=>console.log(ex)
      );
-     setData(result.data);
+    
    
   }
   useEffect(() => {
     loadDetails();
   }, []);
+ 
  
   
 
@@ -37,49 +41,30 @@ const loadDetails =async()=>
 <div className="donardetails">
       <center>
         <div className="con">
-          <table className="table table-bordered s">
+          <table className="table table-bordered ">
             <thead>
               <tr>
-                 Donor name
-             </tr>
-             <tr>
-                Donor email
-             </tr>
-             <tr>
-                Donor Donation
-             </tr>
-             <tr>
-                Donor Project Code
-             </tr>
-             <tr>
-               Project Name
-             </tr>
-             <tr>
-               project description
-             </tr>
-             <tr>
-               Project Place
-             </tr>
+                 <th>Donor name</th>
+                 <th>Donor email</th>
+                 <th>Donor Donation</th>
+                 <th>Donor Project Code</th>
+                 <th>Project Name</th>
+                 <th>project description</th>
+                 <th>Project Place</th>
+
+              </tr>
                   
             </thead>
             <tbody>
-              {data.map((details) => (
-                <tr key={details.projectCode}>
-                  <td scope="row">{details.projectCode}</td>
-
-                  <td>{details.donorname}</td>
-
-                  <td>{details.donoremail}</td>
-
-                  <td>{details.donordonation}</td>
-                  <td>{details.project_name}</td>
-                  <td>{details.project_description}</td>
-                  <td>{details.projectplace}</td>
-
-                
-                 
-                </tr>
-              ))}
+            <tr>
+      <td>{JSON.stringify(data.donorname)}</td>
+      <td>{JSON.stringify(data.donoremail)}</td>
+      <td>{JSON.stringify(data.donordonation)}</td>
+      <td>{JSON.stringify(data.projectCode)}</td>
+      <td>{JSON.stringify(data.project_name)}</td>
+      <td>{JSON.stringify(data.project_description)}</td>
+      <td>{JSON.stringify(data.projectplace)}</td>
+  </tr>
             </tbody>
            
           </table>

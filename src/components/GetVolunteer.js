@@ -1,8 +1,7 @@
 import axios from "axios";
 import React, { useEffect, useState } from "react";
 import { Link, useNavigate, useParams } from "react-router-dom";
-
-
+import "../style.css";
 function GetVolunteer() {
  
   
@@ -16,16 +15,16 @@ const [data,setData]=useState([]
 );
 const loadDetails =async()=>
   {
-     const result =await  axios
+    return axios
      .get(`http://localhost:8080/api/volunteer/${id}`)
      .then(
-      (res)=>console.log(res.data)
+      (response)=>setData(response.data)
       
      ).catch(
       (ex)=>console.log(ex)
      );
-     setData(result.data);
-   
+    
+ 
   }
   
   useEffect(() => {
@@ -39,48 +38,30 @@ const loadDetails =async()=>
 <div className="donardetails">
       <center>
         <div className="con">
-          <table className="table table-bordered s">
-            <thead>
-            <tr>
-                Volunteer Project Code
-             </tr>
-              <tr>
-                 Volunteer name
-             </tr>
-             <tr>
-                Volunteer email
-             </tr>
-           
-             <tr>
-               Project Name
-             </tr>
-             <tr>
-               project description
-             </tr>
-             <tr>
-               Project Place
-             </tr>
-                  
-            </thead>
-        
+        <table className="table table-bordered" >
+          <thead>
+        <tr>
+            <th>Volunteer Project Code :</th>
+            <th>Volunteer name :</th>
+            <th>Volunteer email :</th>
+            <th>Project Name :</th>
+            <th>project description :</th>
+            <th>Project Place :</th>
+        </tr>
+        </thead>
+        <tbody>
+        <tr>
+            <td>{JSON.stringify(data.projectCode)}</td>
+            <td>{JSON.stringify(data.volunteername)}</td>
+            <td>{JSON.stringify(data.volunteeremail)}</td>
+            <td>{JSON.stringify(data.project_name)}</td>
+            <td>{JSON.stringify(data.project_description)}</td>
+            <td>{JSON.stringify(data.projectplace)}</td>
 
-
-            <tbody>
-              {data.map((details) => (
-                <tr key={details.projectCode}>
-                  <td scope="row">{details.projectCode}</td>
-                  <td>{details.volunteername}</td>
-                  <td>{details.volunteeremail}</td>
-                  <td>{details.project_name}</td>
-                  <td>{details.project_description}</td>
-                  <td>{details.projectplace}</td>
-              
-
-                </tr>
-              ))}
-            </tbody>
-           
-          </table>
+        </tr>
+        </tbody>
+     
+    </table>
         </div>
       </center>
     </div>

@@ -129,4 +129,11 @@
     cursor: pointer;
     color: #ffdd40;
   }
+
+  @media screen and(max-width:414px) {
+    .text {
+      visibility: collapse;
+    }
+
+  }
 }

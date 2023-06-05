@@ -27,6 +27,13 @@
 
 }
 
+@media screen and(max-width:414px) {
+    .res {
+        visibility: collapse;
+    }
+
+}
+
 .navlink1 {
     color: white;
     text-decoration: none;
